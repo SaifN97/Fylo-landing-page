@@ -1,3 +1,7 @@
+@use 'colors' as *;
+:root {
+  --spacer: 1rem;
+}
 $ff-sans: "Open Sans", sans-serif; //Body
 $ff-raleway: "Raleway", sans-serif; //Headings, Call-to-actions, Header Navigation
 
@@ -10,7 +14,6 @@ $fs-900: 2.125rem;
 
 $fw-400: 400;
 $fw-700: 700;
-
 /* reset */
 *,
 *::before,
@@ -22,8 +25,9 @@ h1,
 h2,
 h3,
 h4 {
-  line-height: 1;
+  //   line-height: 1.3;
   font-family: $ff-raleway;
+  font-size: 1.5rem;
 }
 
 body,
@@ -54,8 +58,60 @@ img {
   display: block;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   line-height: 1.3;
   font-family: $ff-sans;
   font-size: $fs-400;
+  color: $very-dark-blue;
+}
+
+//general layout
+.container {
+  padding: 0 1.5rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.flow-content > * + * {
+  margin-top: var(--flow-space, var(--spacer));
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  .split {
+    flex-direction: column-reverse;
+  }
+  padding: 5rem 0;
+}
+
+input {
+  outline: none;
+  color: $light-gray;
+  border: 1px solid $very-dark-blue;
+  border-radius: 3px;
+  padding: 0.5rem 1.5rem;
+  width: 100%;
+  &:focus {
+    outline: none;
+    color: $very-dark-blue;
+  }
+}
+button {
+  font-size: 1rem;
+  font-weight: 700;
+  background: $bright-blue;
+  color: $light-grayish-blue;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  padding: 0.8rem;
 }

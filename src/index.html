@@ -28,12 +28,12 @@
   </head>
   <body>
     <header>
-      <div class="container">
-        <a aria-label="fylo home page" href="#"
+      <div class="container split">
+        <a aria-label="fylo home page" href="#" class="logo"
           ><img src="./images/logo.svg" alt=""
         /></a>
         <nav class="primary-nav">
-          <ul class="primary-nav-list">
+          <ul class="primary-nav-list split">
             <li><a href="#">Features</a></li>
             <li><a href="#">Team</a></li>
             <li><a href="#">Sign In</a></li>
@@ -43,14 +43,14 @@
 
       <section class="hero">
         <div class="container split">
-          <div class="col">
+          <div class="text-col flow-content">
             <h1>All your files in one secure location, accessible anywhere.</h1>
             <p>
               Fylo stores your most important files in one secure location.
               Access them wherever you need, share and collaborate with friends,
               family, and co-workers.
             </p>
-            <form action="#" class="hero-form">
+            <form action="#" class="hero-form flow-content">
               <input
                 type="email"
                 class="email"
@@ -69,7 +69,7 @@
     <main>
       <section class="info">
         <div class="container split">
-          <div class="col">
+          <div class="text-col flow-content">
             <h2>Stay productive, wherever you are</h2>
             <p>
               Never let location be an issue when accessing your files. Fylo has
@@ -80,7 +80,7 @@
               colleagues for live collaboration. No email attachments required!
             </p>
             <a href="#">See how Fylo works</a>
-            <div class="testimonial">
+            <div class="testimonial flow-content">
               <p>
                 Fylo has improved our team productivity by an order of
                 magnitude. Since making the switch our team has become a
@@ -102,8 +102,8 @@
       </section>
 
       <section class="cta">
-        <div class="container split">
-          <div class="col">
+        <div class="container split flow-content">
+          <div class="text-col flow-content">
             <h3>Get early access today</h3>
             <p>
               It only takes a minute to sign up and our free starter tier is
@@ -111,7 +111,7 @@
               would be happy to help you.
             </p>
           </div>
-          <form action="#" class="cta-form-secondary">
+          <form action="#" class="cta-form flow-content">
             <input
               type="email"
               name="email"
@@ -125,11 +125,11 @@
     </main>
 
     <footer>
-      <div class="container">
+      <div class="container flow-content">
         <a href="#" aria-label="fylo home page">
           <img src="./images/logo.svg" alt="" class="footer-logo" />
         </a>
-        <div class="split">
+        <div class="split flow-content">
           <div class="contact-info flow-content">
             <div class="phone">
               <img src="./images/icon-phone.svg" alt="" />
@@ -140,17 +140,19 @@
               <p>example@fylo.com</p>
             </div>
           </div>
-          <ul class="flow-content">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#"></a>Jobs</li>
-            <li><a href="#"></a>Press</li>
-            <li><a href="#"></a>Blog</li>
-          </ul>
-          <ul class="flow-content">
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Privacy</a></li>
-          </ul>
+          <div class="footer-nav split flow-content">
+            <ul class="flow-content">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Jobs</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+            <ul class="flow-content">
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
+          </div>
           <div class="social split">
             <a href="#" aria-label="facebook"
               ><i class="fab fa-facebook-f"></i
