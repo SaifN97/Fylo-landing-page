@@ -7,9 +7,10 @@
 header {
   text-align: center;
   padding: 1.5rem 0;
-  .split {
+  & > .split {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 
   .logo {
@@ -18,6 +19,7 @@ header {
   .primary-nav-list {
     margin: 0;
     &.split {
+      flex-direction: row;
       gap: 1rem;
     }
     a {
@@ -27,11 +29,11 @@ header {
   }
 
   //hero section
-  .hero {
-    .split {
-      flex-direction: column-reverse;
-    }
-  }
+  //   .hero {
+  //     .split {
+  //       flex-direction: column-reverse;
+  //     }
+  //   }
 }
 
 //Intro section
@@ -49,6 +51,7 @@ header {
     a {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       width: 43%;
       font-size: 0.8rem;
       padding-bottom: 5px;
@@ -77,6 +80,7 @@ header {
       .split {
         flex-direction: row;
         gap: 0.5rem;
+        align-items: center;
         img {
           border-radius: 50%;
           width: 10%;
