@@ -141,7 +141,7 @@ header .primary-nav-list.split {
   gap: 1rem;
 }
 header .primary-nav-list a {
-  color: #070439;
+  color: #585989;
   font-size: 0.8rem;
 }
 header .primary-nav-list a:hover, header .primary-nav-list a:focus {
@@ -298,6 +298,10 @@ footer .social > :first-child {
 
   section .split {
     flex-direction: row;
+  }
+
+  form {
+    max-width: 100%;
   }
 
   header {
