@@ -50,13 +50,19 @@
               Access them wherever you need, share and collaborate with friends,
               family, and co-workers.
             </p>
-            <form action="#" class="hero-form flow-content">
+            <form
+              novalidate
+              onsubmit="return false"
+              action="#"
+              class="hero-form flow-content"
+            >
               <input
                 type="email"
                 class="email"
                 placeholder="Enter your email..."
               />
               <button>Get Started</button>
+              <div class="error">Please check your email</div>
             </form>
           </div>
           <div class="col">
@@ -111,7 +117,12 @@
               would be happy to help you.
             </p>
           </div>
-          <form action="#" class="cta-form flow-content">
+          <form
+            novalidate
+            onsubmit="return false"
+            action="#"
+            class="cta-form flow-content"
+          >
             <input
               type="email"
               name="email"

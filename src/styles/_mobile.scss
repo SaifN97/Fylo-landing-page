@@ -25,15 +25,23 @@ header {
     a {
       color: $very-dark-blue;
       font-size: 0.8rem;
+      &:hover,
+      &:focus {
+        opacity: 0.6;
+      }
     }
   }
+}
 
-  //hero section
-  //   .hero {
-  //     .split {
-  //       flex-direction: column-reverse;
-  //     }
-  //   }
+//hero section
+.hero-form {
+  input:invalid + button:focus + .error {
+    visibility: visible;
+  }
+  .error {
+    visibility: hidden;
+    color: red;
+  }
 }
 
 //Intro section
@@ -58,6 +66,10 @@ header {
       margin: 3rem auto;
       color: $moderate-cyan;
       border-bottom: 2px solid $moderate-cyan;
+      &:hover,
+      &:focus {
+        opacity: 0.6;
+      }
       &::after {
         content: url("../images/icon-arrow.svg");
         display: flex;
@@ -117,6 +129,24 @@ header {
     input {
       outline: none;
       border: none;
+      &:invalid + button:focus {
+        margin-top: 30px;
+      }
+      &:invalid + button:focus::before {
+        display: block;
+      }
+    }
+    button {
+      position: relative;
+      &::before {
+        content: "Please check your email";
+        position: absolute;
+        top: -25px;
+        width: 300px;
+        left: 0;
+        text-align: left;
+        display: none;
+      }
     }
   }
 }

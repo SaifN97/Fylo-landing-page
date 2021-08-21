@@ -44,12 +44,17 @@
       margin-top: 1.5rem;
       display: flex;
       gap: 1rem;
+      position: relative;
       input {
         width: 49.4%;
       }
       button {
         width: 31%;
         margin: 0;
+      }
+      .error {
+        position: absolute;
+        top: 2rem;
       }
     }
   }
@@ -109,7 +114,7 @@
         letter-spacing: 0.5px;
       }
     }
-    form {
+    .cta-form {
       width: 41%;
       padding-right: 2.2rem;
       button {

@@ -39,6 +39,16 @@ select {
   font-family: "Raleway", sans-serif;
 }
 
+form {
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input:invalid {
+  border-color: red;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -101,6 +111,10 @@ button {
   border: none;
   border-radius: 3px;
   padding: 0.8rem;
+  cursor: pointer;
+}
+button:hover, button:focus {
+  opacity: 0.8;
 }
 
 .text-col {
@@ -130,6 +144,17 @@ header .primary-nav-list a {
   color: #070439;
   font-size: 0.8rem;
 }
+header .primary-nav-list a:hover, header .primary-nav-list a:focus {
+  opacity: 0.6;
+}
+
+.hero-form input:invalid + button:focus + .error {
+  visibility: visible;
+}
+.hero-form .error {
+  visibility: hidden;
+  color: red;
+}
 
 .info {
   background: url("/bg-curve-mobile.9bd79edc.svg") no-repeat center/cover;
@@ -152,6 +177,9 @@ header .primary-nav-list a {
   margin: 3rem auto;
   color: #3c9f8f;
   border-bottom: 2px solid #3c9f8f;
+}
+.info .text-col a:hover, .info .text-col a:focus {
+  opacity: 0.6;
 }
 .info .text-col a::after {
   content: url("/icon-arrow.56d7c493.svg");
@@ -204,6 +232,24 @@ header .primary-nav-list a {
 .cta .cta-form input {
   outline: none;
   border: none;
+}
+.cta .cta-form input:invalid + button:focus {
+  margin-top: 30px;
+}
+.cta .cta-form input:invalid + button:focus::before {
+  display: block;
+}
+.cta .cta-form button {
+  position: relative;
+}
+.cta .cta-form button::before {
+  content: "Please check your email";
+  position: absolute;
+  top: -25px;
+  width: 300px;
+  left: 0;
+  text-align: left;
+  display: none;
 }
 
 footer {
@@ -287,6 +333,7 @@ footer .social > :first-child {
     margin-top: 1.5rem;
     display: flex;
     gap: 1rem;
+    position: relative;
   }
   .hero .hero-form input {
     width: 49.4%;
@@ -294,6 +341,10 @@ footer .social > :first-child {
   .hero .hero-form button {
     width: 31%;
     margin: 0;
+  }
+  .hero .hero-form .error {
+    position: absolute;
+    top: 2rem;
   }
 
   .info {
@@ -349,11 +400,11 @@ footer .social > :first-child {
     line-height: 1.5;
     letter-spacing: 0.5px;
   }
-  .cta form {
+  .cta .cta-form {
     width: 41%;
     padding-right: 2.2rem;
   }
-  .cta form button {
+  .cta .cta-form button {
     width: 41%;
   }
 
